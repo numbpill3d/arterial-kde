@@ -44,6 +44,12 @@ ready-to-upload package with its own README and preview.
 first. To change the look, edit the palette at the top of `build.py`, then
 `python3 build.py && ./install.sh`. Re-pack the upload folders with `./package.sh`.
 
+### Ready-to-upload archives
+
+`./make-store-archives.sh` writes a `.tar.gz` per part (theme files only) plus its
+screenshots and a category note into `~/Documents/Arterial KDE Store/` — attach each
+archive to the matching category at https://store.kde.org.
+
 ## What it changes
 
 - Widget style → Kvantum (running Qt apps need a restart)

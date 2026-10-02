@@ -30,6 +30,8 @@ ready-to-upload package with its own README and preview.
 | active vs inactive window edge | Qt widgets (Kvantum) |
 | ![effect](screenshots/kwin-effects.png) | ![terminal](screenshots/terminal.png) |
 | `arterial_incision` mid-animation | Konsole palette |
+| ![pulse](screenshots/kwin-effects-pulse.png) | |
+| `arterial_pulse` focus flash | |
 
 ## Install everything
 

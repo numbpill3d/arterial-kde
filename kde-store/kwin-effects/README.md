@@ -3,7 +3,13 @@
 Two scripted KWin shader effects built on the Burn-My-Windows harness
 (by Simon Schneegans, Vlad Zahorodnii, Martin Flöser; GPL-3.0-or-later).
 
-![incision mid-animation](preview.png)
+![incision mid-animation](preview-incision.png)
+
+_`arterial_incision` — window cut open along a ragged red incision_
+
+![pulse](preview-pulse.png)
+
+_`arterial_pulse` — focused window edge flashes red_
 
 - **arterial_incision** (open/close): red tracers run the window outline, then the window
   is cut open along a ragged horizontal incision. Close plays it in reverse.

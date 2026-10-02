@@ -41,15 +41,10 @@ function shouldAnimate(window) {
   return window.normalWindow || window.dialog;
 }
 
-function forceRoles(window, on) {
-  window.setData(Effect.WindowForceBackgroundContrastRole, on ? true : null);
-  window.setData(Effect.WindowForceBlurRole, on ? true : null);
-}
 
 class ArterialIncision {
   constructor() {
     effect.configChanged.connect(this.loadConfig.bind(this));
-    effect.animationEnded.connect(window => forceRoles(window, false));
     effects.windowAdded.connect(this.onAdded.bind(this));
     effects.windowClosed.connect(this.onClosed.bind(this));
     effects.windowDataChanged.connect(this.onDataChanged.bind(this));
@@ -66,7 +61,6 @@ class ArterialIncision {
   }
 
   run(window, opening) {
-    forceRoles(window, true);
     effect.setUniform(this.shader, 'uForOpening', opening ? 1.0 : 0.0);
     effect.setUniform(this.shader, 'uIsFullscreen', window.fullScreen ? 1.0 : 0.0);
     effect.setUniform(this.shader, 'uSeed', Math.random());
@@ -118,7 +112,6 @@ class ArterialIncision {
     if (key && window[key] && effect.isGrabbed(window, role)) {
       cancel(window[key]);
       delete window[key];
-      forceRoles(window, false);
     }
   }
 }

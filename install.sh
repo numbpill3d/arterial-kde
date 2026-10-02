@@ -37,17 +37,17 @@ rm -rf "$HOME"/.cache/plasma_theme_Arterial* "$HOME"/.cache/plasma-svgelements* 
   && plasma-apply-desktoptheme default >/dev/null || true
 plasma-apply-desktoptheme Arterial >/dev/null || true
 
-echo "· kwin effects"
-# arterial_incision owns the open/close slot, so Doom has to step aside.
-kwriteconfig6 --file kwinrc --group Plugins --key kwin6_effect_doomEnabled false
-kwriteconfig6 --file kwinrc --group Plugins --key arterial_incisionEnabled true
-kwriteconfig6 --file kwinrc --group Plugins --key arterial_pulseEnabled true
+echo "· kwin effects (installed but OFF by default — opt in below)"
+# The effects are installed, not auto-enabled: shader effects are GPU-heavy on
+# integrated graphics and own the exclusive window open/close slot. Enable them
+# yourself in System Settings > Desktop Effects, or:
+#   kwriteconfig6 --file kwinrc --group Plugins --key kwin6_effect_doomEnabled false
+#   kwriteconfig6 --file kwinrc --group Plugins --key arterial_incisionEnabled true
+#   kwriteconfig6 --file kwinrc --group Plugins --key arterial_pulseEnabled true
+#   qdbus6 org.kde.KWin /KWin reconfigure
+kwriteconfig6 --file kwinrc --group Plugins --key arterial_incisionEnabled false
+kwriteconfig6 --file kwinrc --group Plugins --key arterial_pulseEnabled false
 qdbus6 org.kde.KWin /KWin reconfigure >/dev/null
-qdbus6 org.kde.KWin /Effects org.kde.kwin.Effects.unloadEffect kwin6_effect_doom >/dev/null || true
-for e in arterial_incision arterial_pulse; do
-  qdbus6 org.kde.KWin /Effects org.kde.kwin.Effects.unloadEffect "$e" >/dev/null || true
-  qdbus6 org.kde.KWin /Effects org.kde.kwin.Effects.loadEffect "$e" >/dev/null || true
-done
 
 echo "· terminals"
 grep -qx 'include arterial.conf' "$HOME/.config/kitty/kitty.conf" 2>/dev/null \

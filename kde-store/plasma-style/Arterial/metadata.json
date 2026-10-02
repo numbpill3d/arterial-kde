@@ -1,0 +1,17 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "splicer scorn"
+      }
+    ],
+    "Category": "Plasma Theme",
+    "Description": "Black and dark-grey Plasma style with arterial red edges",
+    "EnabledByDefault": true,
+    "Id": "Arterial",
+    "License": "GPL-3.0-or-later",
+    "Name": "Arterial",
+    "Version": "1.0.0"
+  },
+  "X-Plasma-API": "6.0"
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<g id="topleft"><rect x="0" y="0" width="8" height="8" fill="#0f0f0f"/><rect x="0" y="0" width="8" height="1" fill="#b30000"/><rect x="0" y="0" width="1" height="8" fill="#b30000"/><rect x="0" y="0" width="6" height="2" fill="#e01b1b"/><rect x="0" y="0" width="2" height="6" fill="#e01b1b"/></g>
+<g id="top"><rect x="8" y="0" width="16" height="8" fill="#0f0f0f"/><rect x="8" y="0" width="16" height="1" fill="#b30000"/></g>
+<g id="topright"><rect x="24" y="0" width="8" height="8" fill="#0f0f0f"/><rect x="24" y="0" width="8" height="1" fill="#b30000"/><rect x="31" y="0" width="1" height="8" fill="#b30000"/><rect x="26" y="0" width="6" height="2" fill="#e01b1b"/><rect x="30" y="0" width="2" height="6" fill="#e01b1b"/></g>
+<g id="left"><rect x="0" y="8" width="8" height="16" fill="#0f0f0f"/><rect x="0" y="8" width="1" height="16" fill="#b30000"/></g>
+<g id="center"><rect x="8" y="8" width="16" height="16" fill="#0f0f0f"/></g>
+<g id="right"><rect x="24" y="8" width="8" height="16" fill="#0f0f0f"/><rect x="31" y="8" width="1" height="16" fill="#b30000"/></g>
+<g id="bottomleft"><rect x="0" y="24" width="8" height="8" fill="#0f0f0f"/><rect x="0" y="31" width="8" height="1" fill="#b30000"/><rect x="0" y="24" width="1" height="8" fill="#b30000"/><rect x="0" y="30" width="6" height="2" fill="#e01b1b"/><rect x="0" y="26" width="2" height="6" fill="#e01b1b"/></g>
+<g id="bottom"><rect x="8" y="24" width="16" height="8" fill="#0f0f0f"/><rect x="8" y="31" width="16" height="1" fill="#b30000"/></g>
+<g id="bottomright"><rect x="24" y="24" width="8" height="8" fill="#0f0f0f"/><rect x="24" y="31" width="8" height="1" fill="#b30000"/><rect x="31" y="24" width="1" height="8" fill="#b30000"/><rect x="26" y="30" width="6" height="2" fill="#e01b1b"/><rect x="30" y="26" width="2" height="6" fill="#e01b1b"/></g>
+<rect id="hint-stretch-borders" x="15.0" y="15.0" width="2" height="2" fill="#00ff00" opacity=".01"/>
+<rect id="hint-top-margin" x="10" y="1" width="2" height="6" fill="#00ff00" opacity=".01"/>
+<rect id="hint-bottom-margin" x="10" y="25" width="2" height="6" fill="#00ff00" opacity=".01"/>
+<rect id="hint-left-margin" x="1" y="10" width="6" height="2" fill="#00ff00" opacity=".01"/>
+<rect id="hint-right-margin" x="25" y="10" width="6" height="2" fill="#00ff00" opacity=".01"/>
+</svg>

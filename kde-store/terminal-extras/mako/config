@@ -1,0 +1,15 @@
+# Arterial — mako notifications (splicer scorn)
+background-color=#0a0a0af0
+text-color=#bdb4b4
+border-color=#b30000
+border-size=1
+border-radius=0
+padding=8
+progress-color=over #5c0000
+
+[urgency=low]
+border-color=#3d0000
+
+[urgency=critical]
+border-color=#ff4040
+text-color=#ece6e6

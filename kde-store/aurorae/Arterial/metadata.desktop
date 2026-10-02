@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Arterial
+Comment=Black and dark-grey chrome cut with arterial red edges and a red focus glow
+Type=Service
+X-KDE-ServiceTypes=AuroraeTheme
+X-KDE-Library=aurorae
+X-KDE-PluginInfo-Author=splicer scorn
+X-KDE-PluginInfo-Name=Arterial
+X-KDE-PluginInfo-Version=1.0.0
+X-KDE-PluginInfo-License=GPLv3

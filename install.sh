@@ -4,6 +4,21 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 [ -d "$HERE/dist" ] || python3 "$HERE/build.py"
 
+if [ ! -s "$HERE/.last-backup" ] || [ ! -d "$(cat "$HERE/.last-backup" 2>/dev/null)/config" ]; then
+  BACKUP="$HOME/.local/share/arterial-backup/$(date +%Y%m%d-%H%M%S)"
+  echo "· backing up current config to $BACKUP"
+  mkdir -p "$BACKUP/config/Kvantum" "$BACKUP/config/kitty" "$BACKUP/konsole"
+  for f in kdeglobals kwinrc plasmarc kcminputrc; do
+    [ ! -e "$HOME/.config/$f" ] || cp -a "$HOME/.config/$f" "$BACKUP/config/$f"
+  done
+  [ ! -e "$HOME/.config/Kvantum/kvantum.kvconfig" ] \
+    || cp -a "$HOME/.config/Kvantum/kvantum.kvconfig" "$BACKUP/config/Kvantum/"
+  [ ! -e "$HOME/.config/kitty/kitty.conf" ] \
+    || cp -a "$HOME/.config/kitty/kitty.conf" "$BACKUP/config/kitty/"
+  cp -a "$HOME"/.local/share/konsole/*.profile "$BACKUP/konsole/" 2>/dev/null || true
+  printf '%s\n' "$BACKUP" > "$HERE/.last-backup"
+fi
+
 echo "· copying assets"
 cp -a "$HERE/dist/share/." "$HOME/.local/share/"
 mkdir -p "$HOME/.config/Kvantum" "$HOME/.config/kitty"
